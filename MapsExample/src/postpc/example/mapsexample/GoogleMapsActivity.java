@@ -4,9 +4,13 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class GoogleMapsActivity extends FragmentActivity {
 
@@ -19,11 +23,9 @@ public class GoogleMapsActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_google_maps);
 		
-		getFragmentManager().findFragmentById(R.id.map);
-		//map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+		map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 //		Marker jerusalem = map.addMarker(new MarkerOptions().position(JERUSALEM).title("Jerusalem"));
-//		Marker telAviv = map.addMarker(new MarkerOptions().position(TEL_AVIV).title("Tel Aviv")
-//				.snippet("Rock on party!").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher)));
+//		Marker telAviv = map.addMarker(new MarkerOptions().position(TEL_AVIV).title("Tel Aviv"));
 //
 //		// Move the camera instantly to Jerusalem with a zoom of 15.
 //		map.moveCamera(CameraUpdateFactory.newLatLngZoom(JERUSALEM, 15));
