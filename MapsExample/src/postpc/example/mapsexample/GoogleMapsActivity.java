@@ -24,14 +24,14 @@ public class GoogleMapsActivity extends FragmentActivity {
 		setContentView(R.layout.activity_google_maps);
 		
 		map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
-//		Marker jerusalem = map.addMarker(new MarkerOptions().position(JERUSALEM).title("Jerusalem"));
-//		Marker telAviv = map.addMarker(new MarkerOptions().position(TEL_AVIV).title("Tel Aviv"));
-//
-//		// Move the camera instantly to Jerusalem with a zoom of 15.
-//		map.moveCamera(CameraUpdateFactory.newLatLngZoom(JERUSALEM, 15));
-//
-//		// Zoom in, animating the camera.
-//		map.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
+		Marker jerusalem = map.addMarker(new MarkerOptions().position(JERUSALEM).title("Jerusalem"));
+		Marker telAviv = map.addMarker(new MarkerOptions().position(TEL_AVIV).title("Tel Aviv"));
+
+		// Move the camera instantly to Jerusalem with a zoom of 15.
+		map.moveCamera(CameraUpdateFactory.newLatLngZoom(JERUSALEM, 15));
+
+		// Zoom in, animating the camera.
+		map.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
 	}
 
 	@Override
